@@ -31,18 +31,18 @@ workflows:
       - linux-gcc5-release-qt4
       - linux-gcc5-release-qt5
       - ios-debug
-      #- ios-sanitize-address
-      #- ios-sanitize-thread
-      #- macos-debug
-      #- macos-debug-qt5
-      #- macos-release-node4:
-      #    filters:
-      #      tags:
-      #        only: /node-.*/
-      #- macos-release-node6:
-      #    filters:
-      #      tags:
-      #        only: /node-.*/
+      - ios-sanitize-address
+      - ios-sanitize-thread
+      - macos-debug
+      - macos-debug-qt5
+      - macos-release-node4:
+         filters:
+           tags:
+             only: /node-.*/
+      - macos-release-node6:
+         filters:
+           tags:
+             only: /node-.*/
 
 step-library:
   - &generate-cache-key
